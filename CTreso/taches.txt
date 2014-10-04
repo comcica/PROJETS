@@ -1,0 +1,11 @@
+
+Pour treso  Tu as pratiquement fini.il reste à exploiter les 2 Boutons de traitement pour: transfert des écritures en compta(mise à jour compta)et imprimer journal (mouvement des écritures dans les journaux)?
+
+
+ Dans ETAT on peut mettre : BROUILLARD DE CAISSE /EXTRAIT DE BANQUE/EXTRAIT COMPTE?
+
+
+?7?:?02? ?PM Pour ce qui est de GEA on doit pouvoir trouver des Doc par sélection seulement de l'armoire ou du Rayon.L'option recherche par un mot contenu dans le nom du fichier ne marche pas.Fais aussi en sorte qu'on puisse ouvrir le Doc trouvé et l'imprimer.?
+
+
+?7?:?03? ?PM Ces quelques modif devraient suffire pour faire la démo.on verra pour les critiques des clients.

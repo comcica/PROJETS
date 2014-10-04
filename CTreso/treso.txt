@@ -1,0 +1,14 @@
+CAIS  0101075800         02                                                              Virement interne                             0,00       1000,00
+CAIS  0101075310         02                                                              Virement interne                          1000,00          0,00
+CAIS  050107626000       1                                                               Achat de 3 cartes téléphoniques            360,00          0,00
+CAIS  0501075310         1                                                               Achat de 3 cartes téléphoniques              0,00        360,00
+CAIS  060107626000       2                                                               Achat de timbres                           100,00          0,00
+CAIS  0601075310         2                                                               Achat de timbres                             0,00        100,00
+CAIS  060107606400       3                                                               Achat de rames papier                      300,00          0,00
+CAIS  0601075310         3                                                               Achat de rames papier                        0,00        300,00
+CAIS  0102075800         03                                                              Virement interne                             0,00       1000,00
+CAIS  0102075310         03                                                              Virement interne                          1000,00          0,00
+CAIS  0202075800         01                                                              Mouvements de fonds                          0,00        500,00
+CAIS  0202075310         01                                                              Mouvements de fonds                        500,00          0,00
+CAIS  0103075800         04                                                              Virement interne                             0,00       1000,00
+CAIS  0103075310         04                                                              Virement interne                          1000,00          0,00

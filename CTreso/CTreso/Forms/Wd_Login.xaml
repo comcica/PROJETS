@@ -1,0 +1,27 @@
+﻿<Window x:Class="Wd_Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Identification sur le Server de Base de Données" Height="377" Width="551" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Login Utilisateur" Height="42" HorizontalAlignment="Left" Margin="130,12,0,0" Name="Label1" VerticalAlignment="Top" Width="207" FontWeight="Bold" FontSize="20" />
+        <Border BorderBrush="#FF2A56A1" BorderThickness="2" Height="266" HorizontalAlignment="Left" Margin="12,60,0,0" Name="Border1" VerticalAlignment="Top" Width="505">
+            <Grid Height="241" Name="Grid1" Width="489">
+                <Label Content="Login : " Height="27" HorizontalAlignment="Left" Margin="20,78,0,0" Name="Label4" VerticalAlignment="Top" Width="129" />
+                <Label Content="Password : " Height="27" HorizontalAlignment="Left" Margin="20,131,0,0" Name="Label5" VerticalAlignment="Top" Width="102" />
+                <PasswordBox Height="27" HorizontalAlignment="Left" Margin="194,131,0,0" Name="PasswordUser" VerticalAlignment="Top" Width="284" TabIndex="5" />
+                <TextBox Height="27" HorizontalAlignment="Left" Margin="194,78,0,0" Name="TbSQLLogin" VerticalAlignment="Top" Width="283" TabIndex="4" />
+                <Button Content="Cancel" Height="28" HorizontalAlignment="Right" Margin="0,203,11,0" Name="BtnCancel" VerticalAlignment="Top" Width="97" TabIndex="6" />
+                <Button Content="Connect" Height="28" HorizontalAlignment="Left" Margin="266,203,0,0" Name="BtnConnect" VerticalAlignment="Top" Width="97" TabIndex="5" />
+                <Image Height="50" HorizontalAlignment="Left" Margin="20,181,0,0" Name="Img_Logo" Stretch="Fill" VerticalAlignment="Top" Width="220" Source="/Ctreso;component/Images/logoInit2.png"/>
+                <Label Content="Server Database : " Height="27" HorizontalAlignment="Left" Margin="20,27,0,0" Name="Label2" VerticalAlignment="Top" Width="116" />
+                <TextBox Height="28" HorizontalAlignment="Left" Margin="194,27,0,0" Name="IP1" VerticalAlignment="Top" Width="47" AcceptsTab="False" TabIndex="0" Text="127" FontWeight="Bold" TextAlignment="Center" MaxLines="1" MaxLength="3" TextWrapping="WrapWithOverflow" PreviewTextInput="NumberValidationTextBox" />
+                <TextBox Height="28" HorizontalAlignment="Right" Margin="0,26,172,0" Name="IP2" VerticalAlignment="Top" Width="47" AcceptsTab="False" TabIndex="1" FontWeight="Bold" Text="0" TextAlignment="Center" MaxLength="3" MaxLines="1" PreviewTextInput="NumberValidationTextBox"/>
+                <TextBox Height="28" HorizontalAlignment="Left" Margin="350,26,0,0" Name="IP3" VerticalAlignment="Top" Width="47" AcceptsTab="False" TabIndex="2" FontWeight="Bold" Text="0" TextAlignment="Center" MaxLines="1" MaxLength="3" PreviewTextInput="NumberValidationTextBox"/>
+                <TextBox Height="28" HorizontalAlignment="Left" Margin="430,26,0,0" Name="IP4" VerticalAlignment="Top" Width="47" AcceptsTab="False" TabIndex="3" FontWeight="Bold" Text="1" TextAlignment="Center" MaxLength="3" MaxLines="1" PreviewTextInput="NumberValidationTextBox"/>
+                <Label Content="." Height="36" HorizontalAlignment="Left" Margin="247,19,0,186" Name="Label3" VerticalAlignment="Center" Width="24" FontSize="20" VerticalContentAlignment="Center" FontStyle="Normal" FontWeight="Bold" />
+                <Label Content="." FontSize="20" FontStyle="Normal" FontWeight="Bold" Height="36" HorizontalAlignment="Left" Margin="323,19,0,186" Name="Label6" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="24" />
+                <Label Content="." FontSize="20" FontStyle="Normal" FontWeight="Bold" Height="36" HorizontalAlignment="Left" Margin="403,17,0,188" Name="Label7" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="24" />
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
