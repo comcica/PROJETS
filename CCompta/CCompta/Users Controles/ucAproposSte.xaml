@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="ucAproposSte"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="382" d:DesignWidth="709">
+    <Grid Height="380">
+        <GroupBox  BorderBrush="#a1d1ff" BorderThickness="0,2,0,0" Height="290" HorizontalAlignment="Center" Margin="14,67,0,23" Name="GroupBox1" VerticalAlignment="Center" Width="657">
+            <Grid>
+                <Button Content="Infos Société" Height="54" HorizontalAlignment="Center" Margin="119,45,354,185" Name="Btn_Infos" VerticalAlignment="Center" Width="172" />
+                <Button Content="Sttings" Height="54" HorizontalAlignment="Center" Margin="363,45,110,185" Name="Btn_Settings" VerticalAlignment="Center" Width="172" />
+            </Grid>
+        </GroupBox>
+        <Label Content="A Propos de votre Société" FontSize="20" FontWeight="Bold" Height="31" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="204,30,236,319" Name="Label1" VerticalAlignment="Center" Width="269" />
+        <Image Height="39" HorizontalAlignment="Center" Margin="158,22,502,319" Name="Image1" Stretch="Fill" VerticalAlignment="Center" Width="49" Source="/CCompta;component/Images/Infos.jpg" />
+    </Grid>
+</UserControl>

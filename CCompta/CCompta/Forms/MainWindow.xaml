@@ -1,0 +1,138 @@
+﻿<Window xmlns:my="clr-namespace:CCompta" x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:gif="http://wpfanimatedgif.codeplex.com"
+    xmlns:d3="http://research.microsoft.com/DynamicDataDisplay/1.0"
+    Height="600" Width="910" Title="COMCI COMPTABILITE" WindowStartupLocation="CenterScreen"  MinWidth="910" MinHeight="600" Icon="/CCompta;component/Images/logoInit.png" Name="MainWindow" WindowState="Maximized">
+
+    <DockPanel>
+        <!-- Panel entete  -->
+        <Border DockPanel.Dock="Top" BorderThickness="3,3,3,3" BorderBrush="#FF2A56A1">
+            <Grid  Name="Identification" Height="60" DockPanel.Dock="Top">
+                <Image  HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Margin="10,0,0,0" Height="47" Source="/CCompta;component/Images/logoInit2.png" />
+                <TextBlock Name="TblAffCompta" Text="COMCI COMPTABILITE " TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="26" FontFamily="Verdana" Foreground="#0055A5" FontWeight="Bold" Margin="271,10,271,18" />
+                <TextBlock Name="DisplayDESc" Text="Logiciel de Gestion Comptable " HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="15" Foreground="#FF0055A5" FontWeight="Bold" Margin="0,0,5,0"/>
+                <TextBlock Name="DisplayDate" Text="Aujourd'hui" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="15" Foreground="#FF0055A5" FontWeight="Bold" Margin="0,0,6,6"/>
+                <TextBlock Margin="0,0,6,26" Name="DisplayTimer" Text="00:00:00" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="23" FontFamily="Verdana" Foreground="#0055A5" FontWeight="Bold"/>
+
+            </Grid>
+        </Border>
+        <!-- End Panel entete  -->
+        <!-- Panel menu global  -->
+        <DockPanel>
+            <Border DockPanel.Dock="Top" BorderThickness="3,0,3,3" BorderBrush="#FF2A56A1">
+            <DockPanel>
+                    <DockPanel>
+                        <ScrollViewer FlowDirection="LeftToRight" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Name="ScrollViewer1">
+                            <Border DockPanel.Dock="Top">
+                                <Grid Name="DisplayWindow">
+                                    <!--     -->
+                                         <TabControl Name="tcMain" BorderBrush="#a1d1ff" BorderThickness="0,2,0,0" Padding="0" AllowDrop="True" Background="White">
+                                        <!-- Accueil -->
+                                                <TabItem Name="tiHome" IsSelected="True">
+                                                        <TabItem.Header>
+                                                            <Grid>
+                                                                <Grid.ToolTip>
+                                                                     Accueil
+                                                                </Grid.ToolTip>
+                                                                <Image Source="/CCompta;component/Images/home.png" Width="16" Height="16" Cursor="Hand"/>
+                                                            </Grid>
+                                                        </TabItem.Header>
+                                                        <Grid>
+                                                            <Image Source="/CCompta;component/Images/HomeBG.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="435.5" Height="241.5" />
+                                                            <Image Source="/CCompta;component/Images/HomeBG.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="435.5" Height="241.5" RenderTransformOrigin="0.5,0.5" >
+                                                                <Image.RenderTransform>
+                                                                    <TransformGroup>
+                                                                        <ScaleTransform/>
+                                                                        <SkewTransform/>
+                                                                        <RotateTransform Angle="180"/>
+                                                                        <TranslateTransform/>
+                                                                    </TransformGroup>
+                                                                </Image.RenderTransform>
+                                                                
+                                                            </Image>
+                                                            <my:uHome x:Name="uHome" />
+                                                            <Image Height="61" HorizontalAlignment="Right" Margin="0,0,121,55" Stretch="Fill" VerticalAlignment="Bottom" Width="66" Source="/CCompta;component/Images/Sortie.jpg" />
+                                                            <Button Background="Transparent" HorizontalAlignment="Right" Margin="0,0,121,57" Name="Btn_Exit" Width="66" Height="61" VerticalAlignment="Bottom" BorderThickness="0" ClickMode="Release" ClipToBounds="False" Cursor="Hand">
+                                                                <Button.OpacityMask>
+                                                                    <SolidColorBrush />
+                                                                </Button.OpacityMask>
+                                                                <Button.BorderBrush>
+                                                                    <SolidColorBrush />
+                                                                </Button.BorderBrush>
+                                                            </Button>
+                                                        </Grid>
+
+                                                    </TabItem>
+                                        <!-- A Propos de votre Société -->
+                                                    <TabItem Name="tiAproposde" Cursor="Hand">
+                                                        <TabItem.Header>
+                                                            <Grid>
+                                                                <Grid.ToolTip>
+                                                                   Informations de votre société.
+                                                                </Grid.ToolTip>
+                                                                <TextBlock Text="A Propos de votre Société "/>
+                                                            </Grid>
+                                                        </TabItem.Header>
+                                                        <my:ucAproposSte x:Name="ucAproposSte" />
+                                                    </TabItem>
+                                        <!-- Structure  -->
+                                                <TabItem Name="tiStructures" Cursor="Hand">
+                                                    <TabItem.Header>
+                                                        <Grid>
+                                                            <Grid.ToolTip>
+                                                                Structures 
+                                                            </Grid.ToolTip>
+                                                            <TextBlock Text= "Structures"/>
+                                                            <!-- "PITCH &amp; ROLL" />-->
+                                                        </Grid>
+                                                    </TabItem.Header>
+                                                <my:ucStructures x:Name="ucStructures" /> 
+                                                </TabItem>
+                                        <!-- Traitements  -->
+                                                <TabItem Name="tiTraitement" Cursor="Hand">
+                                                    <TabItem.Header>
+                                                        <Grid>
+                                                            <Grid.ToolTip>
+                                                                Tratements
+                                                            </Grid.ToolTip>
+                                                            <TextBlock Text="Traitements"/>
+                                                        </Grid>
+                                                    </TabItem.Header>
+                                                    <my:ucTraitement x:Name="ucTraitement"/>
+                                                </TabItem>
+                                        <!-- Etats  -->
+                                                <TabItem Name="tiEtats" Cursor="Hand">
+                                                    <TabItem.Header>
+                                                        <Grid>
+                                                            <Grid.ToolTip>
+                                                                Etats.
+                                                            </Grid.ToolTip>
+                                                            <TextBlock Text="Etats"/>
+                                                        </Grid>
+                                                    </TabItem.Header>   
+                                                    <!-- <my:uPlayback x:Name="uPlayback1" /> -->
+                                                </TabItem>
+                                        <!-- A propos de logiciel  -->
+                                                <TabItem Name="tiInterro" Cursor="Hand">
+                                                    <TabItem.Header>
+                                                        <Grid>
+                                                            <Grid.ToolTip>
+                                                                Inormations sur le logicie;.
+                                                            </Grid.ToolTip>
+                                                            <TextBlock Text=" ? "/>
+                                                        </Grid>
+                                                    </TabItem.Header>
+                                                    <my:Aproposde x:Name="Aproposde" />
+                                                </TabItem>
+                                         </TabControl>
+                                </Grid>
+                            </Border>
+                        </ScrollViewer>
+                    </DockPanel>
+          </DockPanel>
+          </Border>
+       </DockPanel>
+        <!-- End Panel menu global  -->
+    </DockPanel>
+</Window>

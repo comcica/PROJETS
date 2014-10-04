@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="ucStructures"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="434" d:DesignWidth="738">
+    <Grid Height="421">
+        <GroupBox  BorderBrush="#a1d1ff" BorderThickness="0,2,0,0" Height="279" HorizontalAlignment="Center" Margin="48,55,34,87" Name="GroupBox1" VerticalAlignment="Center" Width="657">
+            <Grid Height="293">
+                <Button Content="Plan Comptable" Height="54" HorizontalAlignment="Center" Margin="107,45,366,195" Name="Btn_PComptable" VerticalAlignment="Center" Width="172" />
+                <Button Content="Plan de Tiers" Height="54" HorizontalAlignment="Center" Margin="372,45,101,195" Name="Btn_PTiers" VerticalAlignment="Center" Width="172" />
+                <Button Content="Code Journaux" Height="54" HorizontalAlignment="Center" Margin="372,177,101,63" Name="Btn_CodeJ" VerticalAlignment="Center" Width="172" />
+                <Button Content="Taux de Taxe" Height="54" HorizontalAlignment="Center" Margin="107,177,366,63" Name="Btn_TTaxe" VerticalAlignment="Center" Width="172" />
+            </Grid>
+        </GroupBox>
+        <Label Content="Structures" Height="31" HorizontalAlignment="Center" Margin="322,18,303,372" Name="Label1" VerticalAlignment="Center" Width="113" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center" />
+        <Image Height="39" HorizontalAlignment="Center" Margin="267,13,422,369" Name="Image1" Source="/CCompta;component/Images/structure.png" Stretch="Fill" VerticalAlignment="Center" Width="49" />
+    </Grid>
+</UserControl>
