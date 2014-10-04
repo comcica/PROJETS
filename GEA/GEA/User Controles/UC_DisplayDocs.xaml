@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="UC_DisplayDocs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="143" d:DesignWidth="671" VerticalAlignment="Top" HorizontalAlignment="Left" IsManipulationEnabled="True" Name="oucdisplaydocs">
+    
+    <Grid >
+        <Label Content="Listes des Archives trouvée :" Name="lblistArch" FontSize="16" FontWeight="Bold" />
+
+        <DataGrid Name="grdDocs" AlternatingRowBackground="#FFC4B0B0"  AutoGenerateColumns="False" Margin="0,28,0,0" IsReadOnly="True">
+                <DataGrid.Columns>
+                <!--<DataGridTextColumn Binding="{Binding fileType}" Width="100" Header="Type Document"/> -->
+                        <DataGridTemplateColumn Header="Type Document" IsReadOnly="True">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                            <Image Source="{Binding fileImage}" Height="16" Width="16"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTextColumn Binding="{Binding fileName}" Width="350" Header="Nom du Fichier"/>
+                        <DataGridTextColumn Binding="{Binding fileDate}" Width="150" Header="Date de creation"/>
+                        <DataGridTextColumn Binding="{Binding fileLastAcces}" Width="150" Header="Dernier Acces"/>
+                        <DataGridTextColumn Binding="{Binding fileLastWrite}" Width="150" Header="Dernière modification"/>
+                        <DataGridTextColumn Binding="{Binding fileLength}" Width="100" Header="Taille"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+    </Grid>
+</UserControl>

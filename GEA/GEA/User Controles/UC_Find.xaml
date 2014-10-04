@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="UC_Find"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="594" d:DesignWidth="1053" Name="oucfind">
+    <Grid>
+        <!--Titre -->
+        <Image Height="30" HorizontalAlignment="Left" Margin="0,12,0,0" Name="Image1" Stretch="Fill" VerticalAlignment="Top" Width="44" Source="/GEA;component/Images/find.jpg" />
+        <TextBlock Height="30" HorizontalAlignment="Left" Margin="50,12,0,0" Name="TextBlock1" Text="Rechercher un Archive" VerticalAlignment="Top" Width="240" Foreground="#FF0055A5" FontSize="20" FontWeight="Bold" />
+        <!--Critères de recherches -->
+        <GroupBox Header="Critères de recherches" Height="180" HorizontalAlignment="Left" Margin="14,48,0,0" Name="GroupBox1" VerticalAlignment="Top" Width="1027" Foreground="#FF0055A5" FontSize="14" FontWeight="Bold" BorderBrush="#FF0055A5">
+            <Grid Width="1021" Height="158">
+                <Label Content="Armoires" FontSize="18" FontWeight="Bold" Height="31" HorizontalAlignment="Left" Margin="39,19,0,0" Name="Lb_Armoire" VerticalAlignment="Top" Width="106" Foreground="#FF0055A5" />
+                <Label Content="Rayons" FontSize="18" FontWeight="Bold" Height="31" HorizontalAlignment="Left" Margin="307,19,0,0" Name="Lb_Rayon" VerticalAlignment="Top" Width="86" Foreground="#FF0055A5" />
+                <Label Content="Classeurs" FontSize="18" FontWeight="Bold" Height="31" HorizontalAlignment="Left" Margin="560,19,0,0" Name="Lb_Classeur" VerticalAlignment="Top" Width="108" Foreground="#FF0055A5" />
+                <Label Content="Dossiers" FontSize="18" FontWeight="Bold" Height="31" HorizontalAlignment="Left" Margin="842,19,0,0" Name="Lb_Dossier" VerticalAlignment="Top" Width="118" Foreground="#FF0055A5" />
+                <ComboBox Height="33" HorizontalAlignment="Left" Margin="41,51,0,0" Name="Cb_Armoire" VerticalAlignment="Top" Width="198" IsEditable="True" Visibility="Visible" />
+                <ComboBox Height="33" HorizontalAlignment="Left" Margin="279,51,0,0" Name="Cb_Rayon" VerticalAlignment="Top" Width="198" IsEditable="True" />
+                <ComboBox Height="33" HorizontalAlignment="Left" Margin="526,51,0,0" Name="Cb_Classeur" VerticalAlignment="Top" Width="198" IsEditable="True" />
+                <ComboBox Height="33" HorizontalAlignment="Left" Margin="775,47,0,0" Name="Cb_Dossier" VerticalAlignment="Top" Width="198" IsEditable="True" />
+                <CheckBox Height="23" HorizontalAlignment="Left" Margin="4,6,0,0" Name="Chb_locArchive" VerticalAlignment="Top" Width="171" FlowDirection="LeftToRight" Content="Localisation Archives" FontSize="12" Foreground="#FF0055A5" />
+                <CheckBox Content="Identité Archives" FlowDirection="LeftToRight" FontSize="12" Foreground="#FF0055A5" HorizontalAlignment="Left" Margin="6,93,0,42" Name="Chb_IdentArchive" Width="171" />
+                <TextBox Height="28" HorizontalAlignment="Left" Margin="143,110,0,0" Name="Tb_fileName" VerticalAlignment="Top" Width="298" />
+                <Label Content="Nom contient :" Height="29" HorizontalAlignment="Left" Margin="41,110,0,0" Name="Lb_fileName" VerticalAlignment="Top" Width="104" Foreground="#FF0055A5" ForceCursor="False" FontSize="12" />
+                <Label Content="Date de création du " FontSize="12" ForceCursor="False" Foreground="#FF0055A5" Height="29" HorizontalAlignment="Left" Margin="446,109,0,0" Name="Lb_fileDate" VerticalAlignment="Top" Width="135" />
+                <Label Content="Au " FontSize="12" ForceCursor="False" Foreground="#FF0055A5" Height="29" HorizontalAlignment="Left" Margin="731,109,0,0" Name="Lb_Au" VerticalAlignment="Top" Width="31" />
+                <DatePicker Height="28" HorizontalAlignment="Left" Margin="579,108,0,0" Name="DP_Debut" VerticalAlignment="Top" Width="145" />
+                <DatePicker Height="26" HorizontalAlignment="Left" Margin="768,109,0,0" Name="DP_fin" VerticalAlignment="Top" Width="146" />
+                <Button Height="38" HorizontalAlignment="Left" Margin="920,107,0,0" Name="Btn_find" VerticalAlignment="Top" Width="92" Foreground="#FF0055A5">
+                    <Image Source="/GEA;component/Images/view40x40.jpg" Width="83" Name="Image2"></Image>
+                </Button>
+            </Grid>
+        </GroupBox>
+        <!--Resultat de la recherche-->
+        <Label Content="Résultat de la recherche :" FontSize="16" FontWeight="Bold" Foreground="#FF0055A5" Margin="17,241,810,324" Name="lblistArch" />
+        <TextBlock Height="21" HorizontalAlignment="Left" Margin="236,249,0,0" Name="Tbl_Result" Text="" VerticalAlignment="Top" Width="383" Foreground="Red" />
+        <!--Listes des Archives -->
+        <DataGrid AlternatingRowBackground="#FFC4B0B0" AutoGenerateColumns="False" IsReadOnly="True" Name="grdDocs" Margin="14,275,12,70">
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Binding="{Binding fileArmoire}" Header="Armoire" Width="100" />
+                <DataGridTextColumn Binding="{Binding fileRayon}" Header="Rayon" Width="100" />
+                <DataGridTextColumn Binding="{Binding fileClasseur}" Header="Classeur" Width="100" />
+                <DataGridTextColumn Binding="{Binding filedossier}" Header="Dossier" Width="100" />
+
+                <DataGridTemplateColumn Header="Type" IsReadOnly="True" Width="50">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Height="16" Source="{Binding fileImage}" Width="16" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Binding="{Binding fileName}" Header="Nom du Fichier" Width="195" />
+                <DataGridTextColumn Binding="{Binding fileDate}" Header="Date de creation" Width="115" />
+                <DataGridTextColumn Binding="{Binding fileLastAcces}" Header="Dernier Acces" Width="100" />
+                <DataGridTextColumn Binding="{Binding fileLastWrite}" Header="Dernière modification" Width="125" />
+                <DataGridTextColumn Binding="{Binding fileLength}" Header="Taille" Width="50" />
+            </DataGrid.Columns>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Consulter Archive" Click="MenuItemArchive_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/GEA;component/Images/view40x40.jpg" Height="16" Width="16" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Supprimer Archive" Click="MenuItemArchive_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/GEA;component/Images/delele32.jpg" Height="16" Width="16" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Enregistrer une copie sous" Click="MenuItemArchive_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/GEA;component/Images/save42x42.jpg" Height="16" Width="16" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+    </Grid>
+</UserControl>

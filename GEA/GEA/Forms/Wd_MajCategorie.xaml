@@ -1,0 +1,11 @@
+﻿<Window x:Class="Wd_MajCategorie"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Armoires" Height="156" Width="540" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="141,42,0,0" Name="Tb_Designation" VerticalAlignment="Top" Width="351" />
+        <Button Content="Cancel" Height="29" HorizontalAlignment="Right" Margin="0,80,26,0" Name="Btn_Cancel" VerticalAlignment="Top" Width="72" />
+        <Button Content="Valider" Height="32" HorizontalAlignment="Left" Margin="326,78,0,0" Name="Btn_Valider" VerticalAlignment="Top" Width="69" />
+        <Label Content="Désignation :" Height="25" HorizontalAlignment="Left" Margin="12,42,0,0" Name="Label1" VerticalAlignment="Top" Width="115" FontSize="14" FontWeight="Bold" />
+    </Grid>
+</Window>

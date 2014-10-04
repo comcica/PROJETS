@@ -1,0 +1,36 @@
+﻿<Window x:Class="SplashScreenStartup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title=""  WindowStartupLocation="CenterScreen" WindowStyle="None" ShowInTaskbar="False" Topmost="True" ResizeMode="NoResize" AllowsTransparency="True">
+    <Window.Background>
+        <SolidColorBrush />
+    </Window.Background>
+
+    <Grid Height="300" Width="500">
+
+        <Image  Source="/GEA;component/Images/splashscreen4.png" Stretch="Uniform" Height="300" />
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,25">
+            <TextBlock Text="GEA" FontFamily="Verdana" FontSize="20" FontWeight="Bold" Foreground="White"  />
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Version " FontFamily="Verdana" FontSize="16" FontWeight="Normal" Foreground="White" />
+                <TextBlock Name="txtVersion" Text="1.0" FontFamily="Verdana" FontSize="16" FontWeight="Normal" Foreground="White" />
+                
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,124,53,146"></StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,35" Height="75">
+            <TextBlock Text="© 2013 COMCI  Inc. Tous droits réservés / All right reserved" FontFamily="Verdana" FontSize="10" FontWeight="Normal" Foreground="White" TextAlignment="Center" FontStyle="Normal" Margin="0,25,0,0" />
+         
+                <TextBlock Text="Last update / Dernière mise a jour : " FontFamily="Verdana" FontSize="10" FontWeight="Normal" Foreground="White" TextAlignment="Center" FontStyle="Normal" />
+
+          
+                <TextBlock Name="txtLastUpdate" Text="2013-04-19" FontFamily="Verdana" FontSize="10" FontWeight="Normal" Foreground="White" TextAlignment="Center" FontStyle="Normal" />
+
+        </StackPanel>
+        <TextBlock Text="Écrit par :" FontFamily="Verdana" FontSize="14" FontWeight="Bold" Foreground="#FF1C51EF" HorizontalAlignment="Center" Margin="270,66,124,219" Width="106" />
+        <TextBlock Text="Lazare ASSOUMOU " FontFamily="Verdana" FontSize="14" FontWeight="Bold" Foreground="#FF1C51EF" Margin="241,87,96,198" />
+    </Grid>
+
+</Window>
