@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Aproposde"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="332" d:DesignWidth="530" Name="Aproposde">
+    <Grid Height="300" Width="500">
+
+        <Image  Source="/CGescom;component/Images/splashscreen4.png" Stretch="Uniform" Height="300" Name="Image1" />
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,25">
+            <TextBlock Text="COMCI GESCOM" FontFamily="Verdana" FontSize="20" FontWeight="Bold" Foreground="White"  />
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Version " FontFamily="Verdana" FontSize="16" FontWeight="Normal" Foreground="White" />
+                <TextBlock Name="txtVersion" Text="1.0" FontFamily="Verdana" FontSize="16" FontWeight="Normal" Foreground="White" />
+
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,124,53,146"></StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,35" Height="75">
+            <TextBlock Text="© 2013 COMCI  Inc. Tous droits réservés / All right reserved" FontFamily="Verdana" FontSize="10" FontWeight="Normal" Foreground="White" TextAlignment="Center" FontStyle="Normal" Margin="0,25,0,0" />
+
+            <TextBlock Text="Last update / Dernière mise a jour : " FontFamily="Verdana" FontSize="10" FontWeight="Normal" Foreground="White" TextAlignment="Center" FontStyle="Normal" />
+
+
+            <TextBlock Name="txtLastUpdate" Text="2013-12-10" FontFamily="Verdana" FontSize="10" FontWeight="Normal" Foreground="White" TextAlignment="Center" FontStyle="Normal" />
+
+        </StackPanel>
+        <TextBlock Text="Écrit par :" FontFamily="Verdana" FontSize="14" FontWeight="Bold" Foreground="#FF1C51EF" HorizontalAlignment="Center" Margin="313,62,81,223" Width="106" />
+        <TextBlock Text="COMCI  CANADA " FontFamily="Verdana" FontSize="14" FontWeight="Bold" Foreground="#FF1C51EF" Margin="284,83,53,202" />
+    </Grid>
+</UserControl>

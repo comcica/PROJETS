@@ -1,0 +1,13 @@
+﻿<Window x:Class="Wd_AjoutCompte"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Ajout Compte" Height="161" Width="508" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="93,10,0,0" Name="TbNumCompte" Text="" VerticalAlignment="Top" Width="219" CharacterCasing="Upper" />
+        <Label Content="N° Compte" Height="27" HorizontalAlignment="Left" Margin="10,10,0,0" Name="Label1" VerticalAlignment="Top" Width="77" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="93,51,0,0" Name="TbIntituleCpte" Text="" VerticalAlignment="Top" Width="378" CharacterCasing="Upper" />
+        <Label Content="Intitulé " Height="27" HorizontalAlignment="Left" Margin="10,51,0,0" Name="Label2" VerticalAlignment="Top" Width="133" />
+        <Button Content="Valider" Height="27" HorizontalAlignment="Left" Margin="279,83,0,0" Name="Btn_Valider" VerticalAlignment="Top" Width="90" />
+        <Button Content="Annuler" Height="27" HorizontalAlignment="Left" Margin="384,83,0,0" Name="Btn_Annuler" VerticalAlignment="Top" Width="90" />
+    </Grid>
+</Window>
